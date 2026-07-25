@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   description: 'Premium legal advisory and client portal for Ducex Solicitors.',
 };
 
+import { CookieConsent } from '../components/widgets/CookieConsent';
+import { WhatsAppButton } from '../components/widgets/WhatsAppButton';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,6 +37,8 @@ export default function RootLayout({
             {children}
           </ConditionalLayoutWrapper>
         </AuthProvider>
+        <CookieConsent />
+        <WhatsAppButton />
       </body>
     </html>
   );

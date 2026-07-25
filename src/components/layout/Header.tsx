@@ -1,18 +1,21 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui/Button';
 import { services } from '../../data/services';
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock, Menu, X } from 'lucide-react';
 import { LinkedinIcon, FacebookIcon, TwitterIcon, InstagramIcon } from '../ui/SocialIcons';
 import styles from './Header.module.css';
 
 export const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const handleLinkClick = () => {
     if (document.activeElement instanceof HTMLElement) {
       document.activeElement.blur();
     }
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -37,7 +40,7 @@ export const Header = () => {
       {/* Main Header */}
       <div className={`container ${styles.headerContainer}`}>
         <div className={styles.logo}>
-          <Link href="/" aria-label="Ducex Solicitors Home">
+          <Link href="/" aria-label="Ducex Solicitors Home" onClick={handleLinkClick}>
             <div className={styles.logoText}>
               <Image src="/images/logo.png" alt="Ducex Solicitors Logo" width={180} height={36} style={{ objectFit: 'contain' }} priority />
             </div>
@@ -75,7 +78,33 @@ export const Header = () => {
             <Button variant="primary" size="small">Book a Consultation</Button>
           </Link>
         </div>
+
+        {/* Mobile Toggle Button */}
+        <button 
+          className={styles.mobileToggle} 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <nav className={styles.mobileNav} aria-label="Mobile Navigation">
+          <ul className={styles.mobileNavLinks}>
+            <li><Link href="/" className={styles.mobileNavLink} onClick={handleLinkClick}>Home</Link></li>
+            <li><Link href="/about" className={styles.mobileNavLink} onClick={handleLinkClick}>About</Link></li>
+            <li><Link href="/services" className={styles.mobileNavLink} onClick={handleLinkClick}>Services</Link></li>
+            <li><Link href="/team" className={styles.mobileNavLink} onClick={handleLinkClick}>Our Team</Link></li>
+            <li><Link href="/insights" className={styles.mobileNavLink} onClick={handleLinkClick}>Insights</Link></li>
+            <li><Link href="/testimonials" className={styles.mobileNavLink} onClick={handleLinkClick}>Client Stories</Link></li>
+            <li><Link href="/legal-navigator" className={styles.mobileNavLink} onClick={handleLinkClick}>Legal Navigator</Link></li>
+            <li><Link href="/portal/login" className={styles.mobileNavLink} onClick={handleLinkClick}>Client Portal Login</Link></li>
+            <li><Link href="/contact" className={styles.mobileNavLink} onClick={handleLinkClick}>Book a Consultation</Link></li>
+          </ul>
+        </nav>
+      )}
     </header>
   );
 };

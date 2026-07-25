@@ -1,0 +1,31 @@
+.page { display: flex; flex-direction: column; gap: 24px; height: 100%; }
+.header { display: flex; justify-content: space-between; align-items: center; }
+.title { font-size: 24px; font-weight: 700; color: #0d1b2e; margin: 0; }
+.actions { display: flex; gap: 12px; }
+.searchBox { display: flex; align-items: center; gap: 8px; background: #fff; padding: 8px 12px; border-radius: 6px; border: 1px solid #e5e7eb; }
+.searchBox input { border: none; outline: none; background: transparent; font-size: 14px; }
+.viewToggle { background: #fff; border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 500; }
+.viewToggle:hover { background: #f9fafb; }
+.board { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 12px; flex: 1; }
+.column { flex: 0 0 300px; background: #f3f4f6; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 12px; }
+.columnHeader { font-size: 13px; font-weight: 700; color: #374151; display: flex; justify-content: space-between; text-transform: uppercase; letter-spacing: 0.05em; }
+.count { background: #e5e7eb; padding: 2px 6px; border-radius: 999px; font-size: 11px; }
+.columnContent { display: flex; flex-direction: column; gap: 10px; }
+.card { background: #fff; padding: 14px; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); cursor: pointer; border: 1px solid #e5e7eb; }
+.card:hover { border-color: #d4a843; }
+.cardHeader { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+.leadName { font-weight: 600; color: #111827; font-size: 14px; }
+.moreBtn { background: none; border: none; color: #9ca3af; cursor: pointer; }
+.cardService { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
+.cardDate { font-size: 11px; color: #9ca3af; }
+.list { background: #fff; border-radius: 8px; border: 1px solid #e5e7eb; overflow: hidden; }
+.table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+.table th { padding: 12px 16px; background: #f9fafb; color: #6b7280; font-weight: 500; font-size: 12px; text-transform: uppercase; border-bottom: 1px solid #e5e7eb; }
+.table td { padding: 12px 16px; border-bottom: 1px solid #e5e7eb; color: #374151; }
+.badge { padding: 4px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+.badgeNEW { background: #f3f4f6; color: #374151; }
+.badgeCONTACTED { background: #e0f2fe; color: #0284c7; }
+.badgeQUALIFIED { background: #fef3c7; color: #d97706; }
+.badgePROPOSAL { background: #f3e8ff; color: #9333ea; }
+.badgeWON { background: #dcfce7; color: #16a34a; }
+.badgeLOST { background: #fee2e2; color: #dc2626; }

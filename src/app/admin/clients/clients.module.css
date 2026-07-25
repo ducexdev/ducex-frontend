@@ -1,0 +1,18 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+.header { display: flex; justify-content: space-between; align-items: center; }
+.title { font-size: 24px; font-weight: 700; color: #0d1b2e; margin: 0; }
+.actions { display: flex; gap: 12px; }
+.searchBox { display: flex; align-items: center; gap: 8px; background: #fff; padding: 8px 12px; border-radius: 6px; border: 1px solid #e5e7eb; }
+.searchBox input { border: none; outline: none; background: transparent; font-size: 14px; }
+.filterBtn { display: flex; align-items: center; gap: 6px; background: #fff; border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 500; }
+.filterBtn:hover { background: #f9fafb; }
+.tableContainer { background: #fff; border-radius: 8px; border: 1px solid #e5e7eb; overflow: hidden; }
+.table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+.table th { padding: 12px 16px; background: #f9fafb; color: #6b7280; font-weight: 500; font-size: 12px; text-transform: uppercase; border-bottom: 1px solid #e5e7eb; }
+.table td { padding: 12px 16px; border-bottom: 1px solid #e5e7eb; color: #374151; }
+.name { font-weight: 600; color: #111827; }
+.badge { padding: 4px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+.badgeINDIVIDUAL { background: #e0f2fe; color: #0284c7; }
+.badgeCORPORATE { background: #fef3c7; color: #d97706; }
+.actionBtn { background: none; border: none; color: #9ca3af; cursor: pointer; padding: 4px; border-radius: 4px; }
+.actionBtn:hover { background: #f3f4f6; color: #111827; }

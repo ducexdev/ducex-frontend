@@ -1,0 +1,223 @@
+.header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-stone);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: box-shadow var(--transition-normal);
+}
+
+/* Topbar Styles */
+.topbar {
+  background-color: var(--color-slate);
+  color: var(--color-stone);
+  font-size: var(--text-xs);
+  padding: var(--space-2) 0;
+}
+
+.topbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.topbarLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.topbarItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.topbarRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.socialIcon {
+  color: var(--color-stone);
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcon:hover {
+  color: var(--color-brass);
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logoName {
+  font-family: var(--font-body);
+  font-weight: var(--font-bold);
+  font-size: var(--text-xl);
+  letter-spacing: 0.1em;
+  color: var(--color-ink);
+}
+
+.logoSubtitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-style: italic;
+  color: var(--color-slate);
+}
+
+.desktopNav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: block;
+  }
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--space-6);
+}
+
+.navLink {
+  font-family: var(--font-body);
+  font-weight: var(--font-medium);
+  font-size: var(--text-xs);
+  color: var(--color-ink);
+  text-transform: capitalize;
+  letter-spacing: 0.04em;
+  padding: var(--space-2) 0;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-brass);
+  transition: width var(--transition-normal);
+}
+
+.navLink:hover::after,
+.navLink:focus-visible::after {
+  width: 100%;
+}
+
+.actions {
+  display: none;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .actions {
+    display: flex;
+  }
+}
+
+.loginBtn {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .loginBtn {
+    display: inline-flex;
+  }
+}
+
+/* Mega Menu Styles */
+.navItemContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px; /* Match header height for stable hover */
+}
+
+.megaMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+  border-top: 4px solid var(--color-brass);
+  pointer-events: none;
+}
+
+.navItemContainer:hover .megaMenu,
+.navItemContainer:focus-within .megaMenu {
+  opacity: 1;
+  visibility: visible;
+  top: 60px;
+  pointer-events: auto;
+}
+
+.megaMenuLink {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+  text-decoration: none;
+}
+
+.megaMenuLink:hover {
+  background-color: var(--color-smoke);
+}
+
+.megaMenuTitle {
+  font-weight: var(--font-bold);
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-1);
+  font-family: var(--font-body);
+}
+
+.megaMenuDesc {
+  font-size: var(--text-xs);
+  color: var(--color-slate-light);
+  line-height: var(--lh-snug);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

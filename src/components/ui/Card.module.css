@@ -1,0 +1,59 @@
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+}
+
+.elevated {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border-color: transparent;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover,
+.clickable:focus-visible {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(21, 25, 31, 0.08), 0 1px 3px rgba(0,0,0,0.05);
+  border-color: rgba(21, 25, 31, 0.1);
+}
+
+/* Variants */
+.card-base {
+  padding: var(--space-6);
+}
+
+.card-service {
+  background-color: var(--bg-surface-alt);
+  border-top: 3px solid var(--color-brass);
+  padding: var(--space-6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-attorney {
+  border: none;
+  background: transparent;
+}
+
+.card-blog {
+  border: none;
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-testimonial {
+  background-color: var(--bg-surface-alt);
+  padding: var(--space-8);
+  border-left: 4px solid var(--color-slate);
+  border-radius: var(--radius-md);
+}

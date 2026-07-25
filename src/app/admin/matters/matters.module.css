@@ -1,0 +1,33 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+.header { display: flex; justify-content: space-between; align-items: center; }
+.title { font-size: 24px; font-weight: 700; color: #0d1b2e; margin: 0; }
+.actions { display: flex; gap: 12px; }
+.searchBox { display: flex; align-items: center; gap: 8px; background: #fff; padding: 8px 12px; border-radius: 6px; border: 1px solid #e5e7eb; }
+.searchBox input { border: none; outline: none; background: transparent; font-size: 14px; }
+.filterBtn { display: flex; align-items: center; gap: 6px; background: #fff; border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 500; }
+.filterBtn:hover { background: #f9fafb; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 16px; transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-color: #d4a843; }
+
+.cardHeader { display: flex; justify-content: space-between; align-items: center; }
+.matterId { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #6b7280; }
+.moreBtn { background: none; border: none; color: #9ca3af; cursor: pointer; padding: 4px; border-radius: 4px; }
+.moreBtn:hover { background: #f3f4f6; color: #111827; }
+
+.matterTitle { font-size: 16px; font-weight: 700; color: #111827; margin: 0; line-height: 1.4; }
+
+.meta { display: flex; flex-direction: column; gap: 8px; }
+.metaItem { display: flex; justify-content: space-between; font-size: 13px; }
+.label { color: #6b7280; }
+.value { color: #374151; font-weight: 500; }
+
+.footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 16px; border-top: 1px solid #f3f4f6; }
+.viewBtn { background: #0d1b2e; color: #fff; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+.viewBtn:hover { background: #1a2b44; }
+
+.badge { padding: 4px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; }
+.badgeACTIVE { background: #dcfce7; color: #16a34a; }
+.badgePENDING { background: #fef3c7; color: #d97706; }
+.badgeCLOSED { background: #f3f4f6; color: #4b5563; }

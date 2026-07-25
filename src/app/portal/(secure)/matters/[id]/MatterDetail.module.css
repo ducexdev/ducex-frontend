@@ -1,0 +1,244 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  width: fit-content;
+}
+
+.backLink:hover {
+  color: var(--color-primary);
+}
+
+.headerCard {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.ref {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  font-family: monospace;
+}
+
+.statusBadge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.statusOpen { background-color: #e0f2fe; color: #0284c7; }
+.statusHold { background-color: #fef9c3; color: #ca8a04; }
+.statusClosed { background-color: #f1f5f9; color: #475569; }
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.metaLabel {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.metaValue {
+  font-weight: 500;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.metaIcon {
+  color: var(--color-accent);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 19px;
+  width: 2px;
+  background-color: var(--color-border);
+}
+
+.timelineItem {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  position: relative;
+  z-index: 1;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineDot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+.timelineContent {
+  flex: 1;
+  background-color: var(--color-bg);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.timelineTitle {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.timelineDate {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}
+
+.timelineDesc {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.documentsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.docItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+
+.docItem:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-bg);
+}
+
+.docIcon {
+  color: #dc2626; /* PDF redish */
+}
+
+.docInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.docName {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.docMeta {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
+.emptyState {
+  text-align: center;
+  color: var(--color-text-light);
+  padding: var(--space-4);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+}

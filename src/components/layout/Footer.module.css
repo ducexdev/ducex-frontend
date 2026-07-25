@@ -1,0 +1,138 @@
+.footer {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+  padding-top: var(--space-16);
+}
+
+.footerTop {
+  display: grid;
+  gap: var(--space-12);
+  margin-bottom: var(--space-16);
+}
+
+@media (min-width: 1024px) {
+  .footerTop {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.brandColumn {
+  max-width: 400px;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  margin-bottom: var(--space-6);
+}
+
+.logoName {
+  font-family: var(--font-body);
+  font-weight: var(--font-bold);
+  font-size: var(--text-2xl);
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+}
+
+.logoSubtitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-brass-light);
+}
+
+.tagline {
+  color: var(--color-stone);
+  margin-bottom: var(--space-6);
+  line-height: var(--lh-relaxed);
+}
+
+.contactInfo {
+  color: var(--color-stone);
+  font-size: var(--text-sm);
+}
+
+.contactInfo a {
+  color: var(--color-brass-light);
+}
+
+.contactInfo a:hover {
+  color: var(--color-white);
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-8);
+}
+
+@media (min-width: 640px) {
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.linkHeading {
+  color: var(--color-white);
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li {
+  margin-bottom: var(--space-3);
+}
+
+.linkList a {
+  color: var(--color-stone);
+  font-size: var(--text-sm);
+}
+
+.linkList a:hover {
+  color: var(--color-white);
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--space-6) 0;
+  font-size: var(--text-sm);
+  color: var(--color-stone);
+}
+
+.footerBottomContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footerBottomContent {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.legalLinks {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.legalLinks a {
+  color: var(--color-stone);
+}
+
+.legalLinks a:hover {
+  color: var(--color-white);
+}

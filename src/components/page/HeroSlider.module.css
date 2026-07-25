@@ -1,0 +1,139 @@
+.heroContainer {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  max-height: 900px;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+/* Trust Signal Banner */
+.trustBannerWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: var(--space-8);
+  z-index: 10;
+}
+
+.trustBanner {
+  display: flex;
+  gap: var(--space-8);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.trustIcon {
+  color: var(--color-brass);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.kenBurns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: kenBurns 10s ease-out forwards;
+}
+
+@keyframes kenBurns {
+  0% { transform: scale(1.0); }
+  100% { transform: scale(1.1); }
+}
+
+.image {
+  object-fit: cover;
+  z-index: 1;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(21, 25, 31, 0.95) 0%, rgba(21, 25, 31, 0.9) 40%, rgba(21, 25, 31, 0.4) 75%, transparent 100%);
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  color: var(--color-white);
+  max-width: 60%;
+  min-width: 300px;
+}
+
+.title {
+  color: var(--color-white);
+  font-size: clamp(var(--text-4xl), 5vw, 56px);
+  line-height: 1.1;
+  margin-bottom: var(--space-6);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-8);
+  color: var(--color-parchment);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.secondaryBtn {
+  color: var(--color-white) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.secondaryBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--color-white) !important;
+}
+
+.indicators {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  z-index: 10;
+}
+
+.indicator {
+  width: 40px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.indicatorActive {
+  background-color: var(--color-brass);
+}

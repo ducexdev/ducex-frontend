@@ -5,57 +5,89 @@
   background-color: var(--color-primary-dark, #0d1b2a);
   color: white;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   z-index: 9998;
-  max-width: 350px;
-  animation: slideUp 0.5s ease-out;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 380px;
+  animation: slideUp 0.4s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .cookieContent {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
-.cookieContent p {
+.cookieTitle {
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #e0e0e0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.cookieText {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.6;
+  color: #c8c8c8;
 }
 
 .link {
   color: var(--color-accent, #c9a96e);
   text-decoration: underline;
-  transition: color 0.3s;
+  transition: color 0.2s;
 }
 
 .link:hover {
   color: white;
 }
 
+.buttonRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
 .acceptButton {
+  flex: 1;
   background-color: var(--color-accent, #c9a96e);
   color: var(--color-primary-dark, #0d1b2a);
   border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.85rem;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  align-self: flex-start;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .acceptButton:hover {
-  background-color: white;
-  transform: translateY(-2px);
+  background-color: #e0be8a;
+  transform: translateY(-1px);
+}
+
+.declineButton {
+  flex: 1;
+  background-color: transparent;
+  color: #c8c8c8;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 9px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.declineButton:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
 }
 
 @keyframes slideUp {
   from {
-    transform: translateY(100px);
+    transform: translateY(40px);
     opacity: 0;
   }
   to {
@@ -70,9 +102,10 @@
     left: 0;
     right: 0;
     max-width: 100%;
-    border-radius: 12px 12px 0 0;
+    border-radius: 14px 14px 0 0;
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px 20px 30px;
+    padding: 20px 20px 28px;
   }
 }
+

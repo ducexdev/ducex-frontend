@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { 
   Users, Home, Building, Scale, FileSignature, 
   Building2, HeartCrack, Gavel, Briefcase, Calculator,
@@ -9,6 +10,30 @@ import {
 import { services } from '../../data/services';
 import { Button } from '../../components/ui/Button';
 import styles from './Services.module.css';
+
+export const metadata: Metadata = {
+  title: 'Our Legal Services | Practice Areas',
+  description:
+    'Ducex Solicitors offers expert legal services in Lagos, Nigeria — Family Law, Property Law, Corporate Law, Litigation, Real Estate, Criminal Law, Wills & Estates, Divorce, Business Law and Taxation.',
+  alternates: { canonical: 'https://www.ducexsolicitors.com/services' },
+  openGraph: {
+    title: 'Legal Services | Ducex Solicitors Lagos Nigeria',
+    description:
+      'Explore our comprehensive practice areas — from Family Law and Property Law to Corporate Law, Criminal Defence and Estate Planning in Lagos, Nigeria.',
+    url: 'https://www.ducexsolicitors.com/services',
+    images: [{ url: '/images/services/litigation-hero.png', width: 1200, height: 630, alt: 'Ducex Solicitors Practice Areas' }],
+  },
+};
+
+// Services structured data
+const servicesJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.ducexsolicitors.com' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.ducexsolicitors.com/services' },
+  ],
+};
 
 // Helper to map service IDs to specific icons
 const getServiceIcon = (id: string) => {
@@ -30,6 +55,10 @@ const getServiceIcon = (id: string) => {
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <div className={styles.heroOverlay}></div>
